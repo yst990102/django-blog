@@ -13,3 +13,5 @@ RUN pip install -r requirements.txt
 
 # 将项目文件复制到容器
 COPY . /app/
+
+EXPOSE 8000
