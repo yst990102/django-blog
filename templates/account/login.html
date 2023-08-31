@@ -9,8 +9,10 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <br>
-
+            <br><span>Demo:</span>
+            <br><span>【管理员】账号：yst990102，密码：zxcvb987321</span>
+            <br><span>【普通用户】账号：test，密码：testtesttest</span>
+            <br><span>【普通用户】账号：123，密码：notcommon123</span>
             <!-- {% get_providers as socialaccount_providers %} -->
 
             <!-- {% if socialaccount_providers %} -->
@@ -19,13 +21,13 @@
                 也可以通过第三方登录:{% endblocktrans %}
             </p> -->
 
-            <div class="socialaccount_ballot">
-                <!-- <h5 class="mb-2 mt-4">第三方登录：</h5>
+            <!-- <div class="socialaccount_ballot">
+                <h5 class="mb-2 mt-4">第三方登录：</h5>
                 <ul class="socialaccount_providers">
                   {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-                </ul> -->
+                </ul>
                 <h5 class="mb-2 mt-4">本地登录：</h5>
-            </div>
+            </div> -->
 
             <!-- {% include "socialaccount/snippets/login_extra.html" %} -->
 
@@ -33,6 +35,8 @@
             <p>{% blocktrans %}If you have not created an account yet, then please
             <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
             {% endif %} -->
+            <br>
+            <br>
             <div class="col-6">
                 <form class="login" id="login_form" method="POST" action="{% url 'account_login' %}">
                     {% csrf_token %}
