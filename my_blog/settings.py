@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     # 'allauth.socialaccount.providers.github',
     # 'allauth.socialaccount.providers.weibo',
 
+    'corsheaders',
     'password_reset',
     'taggit',
     'ckeditor',
@@ -63,6 +64,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -207,6 +210,9 @@ AUTHENTICATION_BACKENDS = (
 SITE_ID = 1
 # 重定向 url
 LOGIN_REDIRECT_URL = '/'
+
+# 设置跨域名
+CORS_ORIGIN_ALLOW_ALL = True
 
 # LOGGING = {
 #     'version': 1,
